@@ -12,7 +12,7 @@ $ sudo apt-get update
 
 Install Tesseract
 ``` bash
-sudo apt install tesseract-ocr
+$ sudo apt install tesseract-ocr
 ```
 
 
