@@ -19,7 +19,9 @@ $ sudo apt-get upgrade
 Install Tesseract
 ``` bash
 $ sudo apt install tesseract-ocr
+(sudo apt-get install tesseract-ocr libtesseract-dev libleptonica-dev)
 ```
+https://github.com/sirfz/tesserocr
 
 
 After checking python works 
