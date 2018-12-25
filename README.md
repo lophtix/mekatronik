@@ -37,3 +37,7 @@ $ python3 -c "import picamera"
 
 Now time to combine with openCV:
 https://picamera.readthedocs.io/en/release-1.13/recipes2.html#capturing-to-an-opencv-object
+
+Install PyTesseract (not finished)
+https://pypi.org/project/pytesseract/
+```pip install pytesseract```
