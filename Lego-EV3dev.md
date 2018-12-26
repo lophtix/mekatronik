@@ -26,13 +26,25 @@ Fullständiga beskrivningar finns på https://www.ev3dev.org/ (på engelska)
 ...
 
 ### Koppla upp ev3 mot internet (admin)  
-ev3 + wifi-USB-nätverkskort eller internetansluten dator/telefon med bluetooth/USB
+Den här biten kan vara krånglig första gångerna man försöker, så detta görs lämpligast i lugn och ro i god tid innan någon ivrigt vill kasta sig över robotprogrammering...
 
-Fullständiga beskrivningar finns på https://www.ev3dev.org/ (på engelska) för olika varianter
+Målet i den här beskrivningen är ju att många ska kunna programmera roboten från sina egna datorer och att man som "admin" inte ska behövas när man väl riggat upp användare+projektinställningar. Därför vill vi att EV3 själv ska kunna ta sig ut på internet och hämta ner användarnasn nya/ändrade program. 
 
-Vi har haft problem med att ställa in vissa nätverk, ibland lyckas man koppla upp med bluetooth till windowsdator så att SSH från windows till EV3 funkar men EV3 kanske ändå inte komemr åt DNS och internet. Då kan man göra vidare inställningar beskrivna på https://www.ev3dev.org/docs/tutorials/setting-up-wifi-using-the-command-line/
+* Följ beskrivningarna länkade på https://www.ev3dev.org/docs/networking/ (på engelska), de bör vara tillräckliga för att få kontakt mellan EV3 och din admin-datormed någon metod...
+* Nu bör det gå att med neskrivningarna på https://www.ev3dev.org/docs/tutorials/connecting-to-ev3dev-with-ssh/ ansluta med SSH till din EV3...
+* Kontrollera om EV3 kommer åt internetadresser t.ex. genom att pinga www.sunet.se  eller någon ip-adress, t.ex. googles nameserver på 8.8.8.8 kolla även att du kan nå gitlabs webisdor, när vi körde `curl https://gitlab.com/` såg det ut så här:
+```
+robot@ev3dev:~$ curl https://gitlab.com/
+<html><body>You are being <a href="https://about.gitlab.com/">redirected</a>.</body></html>robot@ev3dev:~$ 
+```
+   * Om det går fint att nå fram så är detta admin-steg klart och du kan gå vidare till nästa avsnitt
+   * Om det _inte_ funkade får du läsa vidare och ta fram tyngre verktyg:
 
-...
+Vi har haft problem med att (t.ex. via EV3s skärm+knappar) ställa in vissa nätverk på ett sätt så att man kommer åt internet _från_ EV3.  Man kan ibland komma åt EV3 via SSH frpån sin USB-sladds-anslutna eller bluetooth-anslutna dator men EV3 kanske ändå inte komemr åt DNS och internet. Då kan man göra vidare inställningar beskrivna på https://www.ev3dev.org/docs/tutorials/setting-up-wifi-using-the-command-line/
+
+Programemt "ifconfig" som vanligen finns på linux, finns inte på EV3, därför används kommandot `connmanctl` istället. Mer info om det connmanctl finns på t.ex. https://wiki.archlinux.org/index.php/ConnMan - där finns bl.a. tips om man har problem att ansluta till Eduroam som finns på många skolor, universitet m.m.)
+
+Innan du går vidare ska du ha fått `curl https://gitlab.com/` att funka som beskrivet ovan.
 
 ### Skapa gitlab-konto och projekt (alla)
 Gå till https://gitlab.com
