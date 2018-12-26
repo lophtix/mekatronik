@@ -1,4 +1,4 @@
-# Programmera i python på en LEGO Mindstomrms EV3
+# Programmera LEGO Mindstomrms EV3 med Python via webbläsare
 
 Denna guide visar (när den blir klar) hur flera i en grupp (familj, förening, skolklass etc) kan programmera och turas om att köra program på samma EV3-robot. 
 
@@ -35,6 +35,7 @@ Gå till https://gitlab.com
 * Skapa ett eget konto (mitt exempel https://gitlab.com/ErikSundvall)
 * Skapa ett projekt (mitt exempel https://gitlab.com/ErikSundvall/ev3dev-test1) kryssa gärna för att du vill att filen readme.md ska skapas.
 * Visa adressen som står under "clone via https" för den i er grupp som är "admin" så att hen kan förbereda ett filbibliotek till dig. (Adressen i mitt exempel https://gitlab.com/ErikSundvall/ev3dev-test1.git)
+![Skärmdump som visar clone via https](/images/gitlab-clone-1.png)
 * Redigera gärna filen readme.md för att testa redigering, skriv t.ex. något om ditt projekt
 * Skapa din första python-fil (TODO: berätta hur) Fyll med programkod, t.ex. genom att kopiera in följande
 ```python
