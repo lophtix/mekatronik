@@ -20,19 +20,32 @@ Denna guide visar (när den blir klar) hur flera i en grupp (familj, förening, 
 
 ## Den långa versionen
 
-### Förbereda ev3dev (admin, via dator med kortläsare)
+### Förbereda ev3dev (admin)
+Kräver dator med kortläsare m.m.
 Fullständiga beskrivningar finns på https://www.ev3dev.org/ (på engelska)
-
-### Koppla upp ev3 mot internet (admin, ev3 + wifi-USB-nätverkskort eller internetansluten dator/telefon med bluetooth/USB) 
 ...
 
-### Skapa gitlab-konton och projekt (alla)
+### Koppla upp ev3 mot internet (admin)  
+ev3 + wifi-USB-nätverkskort eller internetansluten dator/telefon med bluetooth/USB)
+Fullständiga beskrivningar finns på https://www.ev3dev.org/ (på engelska)
+...
+
+### Skapa gitlab-konto och projekt (alla)
 Gå till https://gitlab.com
 * Skapa ett eget konto (mitt exempel https://gitlab.com/ErikSundvall)
-* Skapa ett projekt (mitt exempel https://gitlab.com/ErikSundvall/ev3dev-test1) kryssa gärna 
-* Visa adressen som står under "clone via https" för den i er grupp som är "admin". (Adresse i mitt exempel https://gitlab.com/ErikSundvall/ev3dev-test1.git)
+* Skapa ett projekt (mitt exempel https://gitlab.com/ErikSundvall/ev3dev-test1) kryssa gärna för att du vill att filen readme.md ska skapas.
+* Visa adressen som står under "clone via https" för den i er grupp som är "admin" så att hen kan förbereda ett filbibliotek till dig. (Adressen i mitt exempel https://gitlab.com/ErikSundvall/ev3dev-test1.git)
 * Redigera gärna filen readme.md för att testa redigering, skriv t.ex. något om ditt projekt
+* Skapa din första python-fil (TODO: berätta hur) Fyll med programkod, t.ex. genom att kopiera in följande
+```python
+...
+```
 
-### Förbereda bibliotek, git och script på ev3 (admin, via SSH)
+### Förbereda bibliotek, git och script på ev3 (admin)
+* Logga in via ssh till EV3, se till att du står i hembiblioteket för användaren "robot"
+* Skapa underbibliotek med samma namn som dina användare och projekt exempelvis `mkdir ErikSundvall`
 
-### 
+
+### Ladda ner och testa ditt program, ändra, ladda ner och testa igen (alla)
+* ...
+
