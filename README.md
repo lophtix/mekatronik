@@ -1,6 +1,12 @@
 # mekatronik
-Lophtix notes about robotics and mechatronics
+Lophtix notes about robotics and mechatronics 
 
+## Links
+* Programmera LEGO Mindstomrms EV3 med Python via webbläsare (written in Swedish)
+
+-----------------------------------
+
+## Notes to be structured later...
 
 Set up via `sudo raspi-config`
  * Keyboard layout to match your physical keyboard
