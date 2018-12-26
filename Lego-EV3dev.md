@@ -26,8 +26,12 @@ Fullständiga beskrivningar finns på https://www.ev3dev.org/ (på engelska)
 ...
 
 ### Koppla upp ev3 mot internet (admin)  
-ev3 + wifi-USB-nätverkskort eller internetansluten dator/telefon med bluetooth/USB)
-Fullständiga beskrivningar finns på https://www.ev3dev.org/ (på engelska)
+ev3 + wifi-USB-nätverkskort eller internetansluten dator/telefon med bluetooth/USB
+
+Fullständiga beskrivningar finns på https://www.ev3dev.org/ (på engelska) för olika varianter
+
+Vi har haft problem med att ställa in vissa nätverk, ibland lyckas man koppla upp med bluetooth till windowsdator så att SSH från windows till EV3 funkar men EV3 kanske ändå inte komemr åt DNS och internet. Då kan man göra vidare inställningar beskrivna på https://www.ev3dev.org/docs/tutorials/setting-up-wifi-using-the-command-line/
+
 ...
 
 ### Skapa gitlab-konto och projekt (alla)
