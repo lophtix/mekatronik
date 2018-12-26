@@ -44,6 +44,10 @@ Vi har haft problem med att (t.ex. via EV3s skärm+knappar) ställa in vissa nä
 
 Programemt "ifconfig" som vanligen finns på linux, finns inte på EV3, därför används kommandot `connmanctl` istället. Mer info om det connmanctl finns på t.ex. https://wiki.archlinux.org/index.php/ConnMan - där finns bl.a. tips om man har problem att ansluta till Eduroam som finns på många skolor, universitet m.m.)
 
+Lite verktyg att använda via SSH:
+* Kommandot `hostname -I` visar EV3s adresser, i mitt fall fick jag svaret `192.168.1.10 169.254.192.141 fd5f:cd1b:d9a6:0:ea4e:6ff:fe09:d4d1` när det kördes första adressen i detta fall var via wifi (usb-wifi-nätverkskortet) andra adressen var den adress som windows tilldelat via bluetooth.
+
+
 Innan du går vidare ska du ha fått `curl https://gitlab.com/` att funka som beskrivet ovan.
 
 ### Skapa gitlab-konto och projekt (alla)
@@ -61,6 +65,34 @@ Gå till https://gitlab.com
 ### Förbereda bibliotek, git och script på ev3 (admin)
 * Logga in via ssh till EV3, se till att du står i hembiblioteket för användaren "robot"
 * Skapa underbibliotek med samma namn som dina användare och projekt exempelvis `mkdir ErikSundvall`
+*
+
+Så här såg den första hämtningen ut när projektet /ErikSundvall/ev3dev-test1 var "privat" så att inmatninga v användarnamn+lösenord krävdes:
+
+```bash
+robot@ev3dev:~$ cd
+robot@ev3dev:~$ pwd
+/home/robot
+robot@ev3dev:~$ ls
+ErikSundvall
+robot@ev3dev:~$ cd ErikSundvall/
+robot@ev3dev:~/ErikSundvall$ git clone https://gitlab.com/ErikSundvall/ev3dev-test1.git
+Cloning into 'ev3dev-test1'...
+Username for 'https://gitlab.com': ErikSundvall
+Password for 'https://ErikSundvall@gitlab.com':
+remote: Enumerating objects: 14, done.
+remote: Counting objects: 100% (14/14), done.
+remote: Compressing objects: 100% (8/8), done.
+remote: Total 14 (delta 0), reused 0 (delta 0)
+Unpacking objects: 100% (14/14), done.
+robot@ev3dev:~/ErikSundvall$ ls
+ev3dev-test1
+robot@ev3dev:~/ErikSundvall$ cd ev3dev-test1/
+robot@ev3dev:~/ErikSundvall/ev3dev-test1$ ls
+README.md  images
+robot@ev3dev:~/ErikSundvall/ev3dev-test1$
+```
+
 
 
 ### Ladda ner och testa ditt program, ändra, ladda ner och testa igen (alla)
