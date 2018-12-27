@@ -30,8 +30,8 @@ Den här biten kan vara krånglig första gångerna man försöker, så detta g�
 
 Målet i den här beskrivningen är ju att många ska kunna programmera roboten från sina egna datorer och att man som "admin" inte ska behövas när man väl riggat upp användare+projektinställningar. Därför vill vi att EV3 själv ska kunna ta sig ut på internet och hämta ner användarnasn nya/ändrade program. 
 
-* Följ beskrivningarna länkade på https://www.ev3dev.org/docs/networking/ (på engelska), de bör vara tillräckliga för att få kontakt mellan EV3 och din admin-datormed någon metod...
-* Nu bör det gå att med neskrivningarna på https://www.ev3dev.org/docs/tutorials/connecting-to-ev3dev-with-ssh/ ansluta med SSH till din EV3... 
+* Följ beskrivningarna länkade på https://www.ev3dev.org/docs/networking/ (på engelska), de bör vara tillräckliga för att få kontakt mellan EV3 och din admin-dator med någon metod...
+* Nu bör det gå att med beskrivningen på https://www.ev3dev.org/docs/tutorials/connecting-to-ev3dev-with-ssh/ ansluta med SSH till din EV3... 
    * Om det inte funkar att med SSH ansluta till namnet ev3dev som i de ovan länkade instruktionerna, pröva då 
    istället med IP-adressen som man kan hitta via knappar+skärm på EV3 under: Wireless and networks > 
    All Network Connections > {välj din anslutning} > IPv4
@@ -45,11 +45,19 @@ robot@ev3dev:~$ curl https://gitlab.com/
 
 Vi har haft problem med att (t.ex. via EV3s skärm+knappar) ställa in vissa nätverk på ett sätt så att man kommer åt internet _från_ EV3.  Man kan ibland komma åt EV3 via SSH frpån sin USB-sladds-anslutna eller bluetooth-anslutna dator men EV3 kanske ändå inte komemr åt DNS och internet. Då kan man göra vidare inställningar beskrivna på https://www.ev3dev.org/docs/tutorials/setting-up-wifi-using-the-command-line/
 
-Programemt "ifconfig" som vanligen finns på linux, finns inte på EV3, därför används kommandot `connmanctl` istället. Mer info om det connmanctl finns på t.ex. https://wiki.archlinux.org/index.php/ConnMan - där finns bl.a. tips om man har problem att ansluta till Eduroam som finns på många skolor, universitet m.m.)
+Programemt "ifconfig" som vanligen finns på linux, finns inte på EV3, därför används kommandot `connmanctl` istället. Mer info om det connmanctl finns på t.ex. https://wiki.archlinux.org/index.php/ConnMan - där finns bl.a. tips om man har problem att ansluta till Eduroam som finns på många skolor, universitet m.m.) Om man exempelvis tröttnar på att försöka knappa in wifi-lösenord etc via knapparna på EV3 så kan man via SSH skapa/redigera en config-fil med nätverksuppgifter:
+* gå till rätt bibliotek med `cd /var/lib/connman/`
+* För hemmanätverket skapade jag där en fil `sudo nano hemma.config` med följamnde innehåll (byt till rätt nätverksanamn och lösen på de didts två raderna)
+```
+[service_home_wifi]
+Type = wifi
+Name = bahnhof2_4Ghz-123456
+Passphrase = yourWifiPasswordGoesHere
+```
 
-Lite verktyg att använda via SSH:
-* Kommandot `hostname -I` visar EV3s adresser, i mitt fall fick jag svaret `192.168.1.10 169.254.192.141 fd5f:cd1b:d9a6:0:ea4e:6ff:fe09:d4d1` när det kördes första adressen i detta fall var via wifi (usb-wifi-nätverkskortet) andra adressen var den adress som windows tilldelat via bluetooth.
-
+Lite nätverksverktyg att använda via SSH:
+* Kommandot `hostname -I` visar EV3s adresser, i mitt fall fick jag svaret `192.168.1.10 169.254.192.141` när det kördes. Första adressen i detta fall var adressen EV3 fått via wifi (usb-wifi-nätverkskortet) andra adressen var den adress som min windows-dator tilldelat EV3 via bluetooth.
+* Vill man se vilken adress datorer ute på internet tyckar att man har så kan man använda `curl ifconfig.me`. Sitter du på ett hemmanät eller liknande som gömmer din EV3 bakom sig så är detta troligen din routers adress ut mot internet
 
 Innan du går vidare ska du ha fått `curl https://gitlab.com/` att funka som beskrivet ovan.
 
