@@ -1,15 +1,16 @@
 ```sudo raspi-config```  
-**Network Options:**  
-* set hostname
-* connect wi-fi
+  
+**Network Options:**
+* set hostname  
+* connect wi-fi  
 **Boot Options:**  
-* boot to CLI
-* turn off splash screen
+* boot to CLI  
+* turn off splash screen  
 **Interfacing Options:**  
-* set keyboard layout
+* set keyboard layout  
 **Interfacing Options:**  
-* enable camera
-* enable SSH
+* enable camera  
+* enable SSH  
 **Advanced Options:**  
-* expand filesystem
+* expand filesystem  
 :)
