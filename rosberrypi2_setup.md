@@ -5,7 +5,7 @@ Setup with raspi-config:
 ```sudo raspi-config```  
   
 **Network Options:**
-* Hostname > set hostname to rosberrypi2.\*  
+* Hostname > set hostname to rosberrypi2.X  
 * Wi-Fi > connect to wi-fi  
 
 **Boot Options:**  
