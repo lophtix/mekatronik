@@ -1,3 +1,7 @@
+Update
+```sudo apt-get update && sudo apt-get upgrade```
+  
+Setup with raspi-config
 ```sudo raspi-config```  
   
 **Network Options:**
@@ -17,5 +21,10 @@
 
 **Advanced Options:**  
 * *Expand Filesystem*  
+  
+Install pijuice software and remove lock file:  
+```
+sudo apt-get pijuice-base
+sudo rm /tmp/pijuice_gui.lock
+```  
 
-:)
