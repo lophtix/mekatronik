@@ -63,4 +63,6 @@ https://medium.freecodecamp.org/getting-started-with-tesseract-part-i-2a6a6b1cf7
   
 How to use image preprocessing to improve the accuracy of Tesseract  
 https://medium.freecodecamp.org/getting-started-with-tesseract-part-ii-f7f9a0899b3f
-
+  
+Detect whitlisted single character:  
+```tesseract stdin stdout -c tessedit_char_whitelist=HSU -psm 10```
