@@ -30,4 +30,8 @@ Install pijuice software and remove lock file:
 sudo apt-get pijuice-base
 sudo rm /tmp/pijuice_gui.lock
 ```  
-
+  
+Install ROS Kinetic:
+```
+:)
+```
