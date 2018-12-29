@@ -2,7 +2,7 @@
 Lophtix notes about robotics and mechatronics 
 
 ## Links
-* [Programmera LEGO Mindstomrms EV3 med Python via webbläsare](Lego-EV3dev.md) (written in Swedish)
+* [Programmera LEGO Mindstorms EV3 med Python via webbläsare](Lego-EV3dev.md) (written in Swedish)
 
 -----------------------------------
 
