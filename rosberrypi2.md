@@ -1,21 +1,21 @@
 ```sudo raspi-config```  
   
 **Network Options:**
-* set hostname  
-* connect wi-fi  
+* Hostname > set hostname to rosberrypi2.\*  
+* Wi-Fi > connect to wi-fi  
 
 **Boot Options:**  
-* boot to CLI  
-* turn off splash screen  
+* Desktop / CLI > select *Console Autologin*  
+* Splash Screen > turn off splash screen  
+
+**Localisation Options:**  
+* Change Keyboard Layout > set keyboard layout to Swedish  
 
 **Interfacing Options:**  
-* set keyboard layout  
-
-**Interfacing Options:**  
-* enable camera  
-* enable SSH  
+* Camera > enable camera  
+* SSH > enable SSH  
 
 **Advanced Options:**  
-* expand filesystem  
+* *Expand Filesystem*  
 
 :)
